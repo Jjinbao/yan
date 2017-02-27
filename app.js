@@ -28,7 +28,6 @@ app.all('*', function(req, res, next) {
   res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type,userId,token");
   res.setHeader("Content-Type","application/json;charset=utf-8");
-  console.log('这里执行了几遍？');
   next();
 });
 
@@ -39,7 +38,7 @@ app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('Not Found------------------');
   err.status = 404;
   next(err);
 });
